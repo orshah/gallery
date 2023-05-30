@@ -10,10 +10,68 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+  margin: 2rem 2rem;
+  justify-content: center;
 }
 
 img {
   width: 200px;
   height: 200px;
   object-fit: fill;
+  box-shadow: 11px 5px 10px 1px #333030, 1px 5px 10px 1px #6a6a6a;
+  border-radius: 5px;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+img:hover {
+  filter: contrast(130%);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+
+html,
+body {
+  min-height: 100%;
+}
+body {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+h1 {
+  display: table;
+  margin: 5% auto 0;
+  text-transform: uppercase;
+  font-family: "Anaheim", sans-serif;
+  font-size: 4em;
+  font-weight: 400;
+  text-shadow: 0 1px white, 0 2px rgb(0, 0, 0);
+  color: azure;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+button {
+  height: 3rem;
+  font-size: 2rem;
+  font-family: "Anaheim", sans-serif;
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #efd3ee 10%, #8e788b 100%);
+  border: 1px solid white;
+  color: azure;
+  font-weight: bolder;
 }

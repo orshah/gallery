@@ -65,9 +65,9 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <p>Talking to API</p>
-      <button onClick={onClickHandler}>Get a dog picture</button>
+    <div className="app">
+      <h1>DOG GALLERY</h1>
+      <button onClick={onClickHandler}>Get a dog picture🐶 </button>
       <div className="dog-shelter">{showDogList}</div>
     </div>
   );
