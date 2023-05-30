@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  display: border-box;
+}
+
+.dog-shelter {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+}
