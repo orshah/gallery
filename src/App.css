@@ -75,3 +75,11 @@ button {
   color: azure;
   font-weight: bolder;
 }
+
+.fter {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Anaheim", sans-serif;
+  background-image: linear-gradient(135deg, #efd3ee 10%, #8e788b 100%);
+}

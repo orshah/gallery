@@ -71,11 +71,19 @@ function App() {
     );
   });
 
+  let getYear = new Date();
+
   return (
     <div className="app">
       <h1>DOG GALLERY</h1>
       <button onClick={onClickHandler}>Get a dog picture🐶 </button>
       <div className="dog-shelter">{showDogList}</div>
+      <div className="fter">
+        <footer>
+          {" "}
+          © {getYear.getFullYear()} Shahzod Oripov. All rights reserved
+        </footer>
+      </div>
     </div>
   );
 }
