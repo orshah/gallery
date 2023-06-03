@@ -1,5 +1,6 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function App() {
   // const [dogImg, setDogImg] = useState("");
@@ -47,14 +48,20 @@ function App() {
 
   const onClickHandler = async () => {
     try {
-      const response = await fetch("https://dog.ceo/api/breeds/image/random");
-      const data = await response.json();
-      // setDogImg(data.message);
+      const response = await axios.get(
+        "https://dog.ceo/api/breeds/image/random"
+      );
+
+      const { data } = response;
       setDogList([...dogList, data.message]);
     } catch (error) {
       console.log("error", error);
     }
   };
+
+  useEffect(() => {
+    onClickHandler();
+  }, []);
 
   const showDogList = dogList.map((el, index) => {
     return (
